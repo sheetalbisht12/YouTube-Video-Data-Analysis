@@ -1,0 +1,9 @@
+google-api-python-client==2.83.0
+jupyterlab==3.6.2
+matplotlib==3.7.1
+numpy==1.23.5
+pandas==1.5.3
+plotly==5.13.1
+streamlit==1.21.0
+virtualenv==20.21.0
+wordcloud==1.8.2.2
