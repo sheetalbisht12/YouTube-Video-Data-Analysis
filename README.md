@@ -12,7 +12,7 @@ Click here to get to the deployed app [YouTube Video Data Analysis Web App](http
 |Folder / Code|Content|
 |---|---|
 | CSV Files |Contains the scrapped and cleaned data of some YouTube channels|
-| app.py|Contains the actual Streamlit application|
 |Data_generation.ipynb|Contains the source code for data generation|
 |MaindataFile.csv|Contains combined data from CSV Files into one file for visualization|
+| app.py|Contains the actual Streamlit application|
 |requirements.txt|Contains all requirements(for Streamlit Sharing)|
