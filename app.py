@@ -89,24 +89,37 @@ st.plotly_chart(plot5,use_container_width=True)
 st.divider()
 
 #wordcloud
+comment_words = ''
 stopwords = set(STOPWORDS)
-stopwords.update(["and", "now", "the", "need", "flavors"])
-df_selection['title_no_stopwords']= df_selection['Title'].apply(lambda x:[ item for item in str(x).split() if item not in stopwords])
-all_words = list([a for b in df_selection['title_no_stopwords'].tolist() for a in b])
-all_words_str = ' '.join(all_words)
 
+df_selection['title_no_stopwords']= df_selection['Title'].apply(lambda x:[ item for item in str(x).split() if item not in stopwords])
+pd.options.mode.chained_assignment = None
+
+for val in df_selection['title_no_stopwords']:
+     
+    # typecaste each val to string
+    val = str(val)
+ 
+    # split the value
+    tokens = val.split()
+     
+    # Converts each token into lowercase
+    for i in range(len(tokens)):
+        tokens[i] = tokens[i].lower()
+     
+    comment_words += " ".join(tokens)+" "
+    
+    
 def plot_cloud(wordcloud):
     plt.figure(figsize=(30,20))
     plt.imshow(wordcloud)
     plt.axis("off");
     
-wordcloud = WordCloud(width = 800, height = 400, random_state=1, background_color="black",
-                     colormap= 'OrRd', collocations = False).generate(all_words_str)
+wordcloud = WordCloud(width = 800, height = 400, random_state=1, background_color="black",colormap= 'OrRd', collocations = False).generate(all_words_str)
 fig = (plot_cloud(wordcloud))
 st.pyplot(fig)
 
 st.set_option('deprecation.showPyplotGlobalUse', False)
-
 #------Hide Streamlit Style-------
 hide_st_style="""
             <style>
