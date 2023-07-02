@@ -115,7 +115,7 @@ def plot_cloud(wordcloud):
     plt.imshow(wordcloud)
     plt.axis("off");
     
-wordcloud = WordCloud(width = 800, height = 400, random_state=1, background_color="black",colormap= 'OrRd', collocations = False).generate(all_words_str)
+wordcloud = WordCloud(width = 800, height = 400, random_state=1, background_color="black",colormap= 'OrRd', collocations = False).generate(comment_words)
 fig = (plot_cloud(wordcloud))
 st.pyplot(fig)
 
