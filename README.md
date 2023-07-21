@@ -4,7 +4,7 @@ Scraping was done by using [YouTube's data API](https://console.cloud.google.com
 
 
 ## Deployed App
-Click here to get to the deployed app [YouTube Video Data Analysis Web App](https://sheetalbisht12-youtube-video-data-analysis-app-3nil87.streamlit.app/).
+Click here to get to the deployed app [YouTube Video Data Analysis Web App](https://youtube-video-data-analysis.streamlit.app/).
 
 
 ## Repository Structure
